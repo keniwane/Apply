@@ -1,7 +1,12 @@
 import React from 'react';
+import Dashboard from './components/Dashboard.jsx';
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 
 export default App;
