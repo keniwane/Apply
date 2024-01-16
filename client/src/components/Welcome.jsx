@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 const Welcome = () => {
   return (
-    <div>
+    <div className='flex justify-between items-center'>
       <div>Welcome, Ken</div>
       <Navbar />
     </div>
