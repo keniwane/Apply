@@ -9,12 +9,14 @@ const Dashboard = () => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
-      <Welcome />
+      <div className='px-10'>
+        <Welcome />
+      </div>
       <div className='flex flex-grow'>
-        <div className='w-1/3 p-4'>
+        <div className='w-1/4 p-3'>
           <Activity />
         </div>
-        <div className='w-2/3 p-4 '>
+        <div className='w-3/4 p-4 '>
           <Searchbar />
           <JobCard />
         </div>
