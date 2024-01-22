@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <nav>
         {/* Add your navigation links here */}
-        <Link to='/'>Home</Link>
+        <Link to='/'></Link>
         {/* Add other links as needed */}
       </nav>
 
