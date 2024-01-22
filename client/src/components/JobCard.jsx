@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { GoPlus } from 'react-icons/go';
 
 const JobCard = () => {
   const [card, setCard] = useState([]);
 
-  return <div className='box-border h-48 w-96 p-4 border-4'>JobCard</div>;
+  useEffect(() => {}, []);
+
+  return (
+    <div>
+      <button
+        className='bg-gray-700 hover:bg-gray-600 text-white w-96 h-48 p-4 border-4 box-border rounded-md'
+        onClick={() => {}}
+      >
+        <div className='flex justify-center items-center h-full'>
+          <GoPlus className='large-icon' />
+        </div>
+      </button>
+    </div>
+  );
 };
 
 export default JobCard;

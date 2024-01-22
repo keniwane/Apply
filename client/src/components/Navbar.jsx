@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return <div className='text-xl'> Jobs | Calendar</div>;
 };
 
 export default Navbar;
