@@ -2,7 +2,7 @@ import Dashboard from './components/Dashboard.jsx';
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-bg-color'>
       <Dashboard />
     </div>
   );

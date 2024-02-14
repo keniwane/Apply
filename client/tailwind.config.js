@@ -2,7 +2,13 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'bg-color': '#24202D',
+        'job-card-color': '#333038',
+        'header-color': '#28252B',
+      },
+    },
   },
   plugins: [],
 };

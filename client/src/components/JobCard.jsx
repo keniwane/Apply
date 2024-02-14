@@ -1,54 +1,18 @@
-import { useState } from 'react';
-import { GoPlus } from 'react-icons/go';
-import Sidebar from './Sidebar.jsx';
-
-const JobCard = () => {
-  const [cards, setCards] = useState([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    jobTitle: '',
-    company: '',
-    status: '',
-    date: '',
-    location: '',
-    contactName: '',
-    contactEmail: '',
-  });
-
-  const openSidebar = () => setIsSidebarOpen(true);
-  const closeSidebar = () => setIsSidebarOpen(false);
-
-  const handleFormSubmit = (newData) => {
-    setCards([...cards, newData]);
-    closeSidebar();
-  };
-
+const JobCard = ({ card }) => {
   return (
-    <div className='flex flex-wrap'>
-      <button
-        className='bg-gray-700 hover:bg-gray-600 text-white w-96 h-48 p-4 border-2 box-border rounded-md m-2' // Keep the styling
-        onClick={openSidebar}
-      >
-        <div className='flex justify-center items-center h-full'>
-          <GoPlus className='large-icon' />
-        </div>
-      </button>
-      {cards.map((card, index) => (
-        <div
-          key={index}
-          className='bg-gray-700 hover:bg-gray-600 text-white w-96 h-48 p-4 border-2 box-border rounded-md m-2' // Keep the styling
-        >
-          <div>{card.jobTitle}</div>
-          <div>{card.company}</div>
-        </div>
-      ))}
-      <Sidebar
-        isOpen={isSidebarOpen}
-        onClose={closeSidebar}
-        formData={formData}
-        setFormData={setFormData}
-        onFormSubmit={handleFormSubmit}
-      />
+    <div className='bg-job-card-color hover:bg-gray-600 text-white max-w-xs md:max-w-md lg:w-96 h-36 md:h-48 lg:h-54 p-4 border-2 box-border rounded-md m-2 flex flex-col'>
+      <div className='mb-2'>
+        <div className='text-xs md:text-sm text-gray-300'>{card.date}</div>
+      </div>
+      <div className='mb-1 md:mb-2'>
+        <div className='text-lg md:text-xl font-bold'>{card.company}</div>
+      </div>
+      <div className='text-base md:text-l mb-4'>{card.jobTitle}</div>
+      <div className='flex-grow'></div>
+      <div className='flex justify-between items-end'>
+        <div className='text-xs md:text-sm'>{card.status}</div>
+        <div className='text-xs md:text-sm'>{card.status}</div>
+      </div>
     </div>
   );
 };

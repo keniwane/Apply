@@ -1,5 +1,5 @@
 import Welcome from './Welcome.jsx';
-import JobCard from './JobCard.jsx';
+import JobList from './JobList.jsx';
 import Header from './Header.jsx';
 import Searchbar from './Searchbar.jsx';
 import Activity from './Activity.jsx';
@@ -17,7 +17,7 @@ const Dashboard = () => {
         </div>
         <div className='w-2/3 p-4 pt-0'>
           <Searchbar />
-          <JobCard />
+          <JobList />
         </div>
       </div>
     </div>

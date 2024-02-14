@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GoPlus } from 'react-icons/go';
-import Sidebar from './Sidebar.jsx';
-import Filter from './Filter.jsx';
+import Sidebar from './Sidebar';
+import JobCard from './JobCard';
 
 const JobList = () => {
   console.log('job list rendered');
@@ -26,14 +26,17 @@ const JobList = () => {
   };
 
   return (
-    <div className='flex flex-wrap'>
-      <Filter cards={cards} />
+    <div className='flex flex-wrap justify-start items-start'>
+      {cards.map((card, index) => (
+        <JobCard key={index} card={card} />
+      ))}
+
       <button
-        className='bg-gray-700 hover:bg-gray-600 text-white w-96 h-48 p-4 border-2 box-border rounded-md m-2'
+        className='bg-job-card-color hover:bg-gray-600 text-white max-w-xs md:max-w-md lg:w-96 h-36 md:h-48 lg:h-54 p-4 border-2 box-border rounded-md m-2'
         onClick={openSidebar}
       >
         <div className='flex justify-center items-center h-full'>
-          <GoPlus className='large-icon' />
+          <GoPlus size='2em' />
         </div>
       </button>
       <Sidebar

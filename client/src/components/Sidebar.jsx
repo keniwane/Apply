@@ -42,7 +42,7 @@ const Sidebar = ({ isOpen, onClose, formData, setFormData, onFormSubmit }) => {
         <input
           type='text'
           placeholder='Date Submitted'
-          requiredvalue={formData.date}
+          required={formData.date}
           onChange={(e) => setFormData({ ...formData, date: e.target.value })}
         />
         <input
