@@ -12,7 +12,7 @@ const Dashboard = () => {
         <Welcome />
       </div>
       <div className='flex flex-grow'>
-        <div className='w-1/3 px-16 p-3 pt-0'>
+        <div className='w-1/3 px-16 p-3 pt-0 '>
           <Activity />
         </div>
         <div className='w-2/3 p-4 pt-0'>

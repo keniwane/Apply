@@ -1,28 +1,10 @@
-import { useState } from 'react';
 import { GoPlus } from 'react-icons/go';
 import Sidebar from './Sidebar';
 import JobCard from './JobCard';
+import useStore from '../store/store';
 
 const JobList = () => {
-  const [cards, setCards] = useState([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    jobTitle: '',
-    company: '',
-    status: '',
-    date: '',
-    location: '',
-    contactName: '',
-    contactEmail: '',
-  });
-
-  const openSidebar = () => setIsSidebarOpen(true);
-  const closeSidebar = () => setIsSidebarOpen(false);
-
-  const handleFormSubmit = (newData) => {
-    setCards([...cards, newData]);
-    closeSidebar();
-  };
+  const { cards, isSidebarOpen, formData, openSidebar, closeSidebar, setFormData, handleFormSubmit } = useStore();
 
   return (
     <div className='flex flex-wrap justify-start items-start'>
