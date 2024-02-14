@@ -6,7 +6,7 @@ import Activity from './Activity.jsx';
 
 const Dashboard = () => {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='bg-bg-color flex flex-col min-h-screen'>
       <Header />
       <div className='px-16 p-8'>
         <Welcome />

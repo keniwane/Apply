@@ -4,7 +4,6 @@ import Sidebar from './Sidebar';
 import JobCard from './JobCard';
 
 const JobList = () => {
-  console.log('job list rendered');
   const [cards, setCards] = useState([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [formData, setFormData] = useState({
